@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭРМИЙТЕК - спецодежда и средства индивидуальной защиты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #d32f2f;
+            --primary-dark: #b71c1c;
+            --secondary: #ffa000;
+            --dark: #263238;
+            --light: #f5f5f5;
+            --gray: #78909c;
+        }
+
+        body {
+            color: var(--dark);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background-color: #144123;
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 120px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: #f4f2a4;
+            margin-right: 50px;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 14px;
+            color: white;
+            font-weight: normal;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item i {
+            color: #f4f2a4;
+        }
+
+        .header-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #f4f2a4;
+        }
+
+        .nav-btn {
+            background-color: #f4f2a4;
+            color: #144123;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: #ebff55;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/fon.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f4f2a4;
+            color: var(--dark);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #ebff55;
+            transform: translateY(-2px);
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background-color: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #144123;
+            margin: 10px auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #fdffee;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card i {
+            font-size: 40px;
+            color: #144123;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        /* Products */
+        .products {
+            padding: 80px 0;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            background-color: var(--light);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background-color: #144123;
+            color: white;
+            border-color: #144123;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .product-info p {
+            color: #144123;
+            margin-bottom: 15px;
+            font-size: 14px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        /* About */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Contacts */
+        .contacts {
+            padding: 80px 0;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-details i {
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .contact-form {
+            flex: 1;
+            background: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #144123;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: var(--secondary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: #cfd8dc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #cfd8dc;
+            font-size: 14px;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .contact-form {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .header-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 15px;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            .hero h2 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .features-grid, .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Стили для полноэкранной галереи */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .gallery-container {
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-main-image {
+            max-width: 100%;
+            max-height: 80%;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px;
+            max-width: 100%;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .gallery-thumbnail:hover, .gallery-thumbnail.active {
+            opacity: 1;
+            border-color: #f4f2a4;
+        }
+
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .gallery-nav:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .gallery-prev {
+            left: 20px;
+        }
+
+        .gallery-next {
+            right: 20px;
+        }
+
+        .gallery-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .gallery-counter {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .multi-image-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Анимации */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .zoom-in {
+            animation: zoomIn 0.3s ease-out;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <img src="images/logo.png" alt="ЭРМИЙТЕК">
+                    <div>
+                        <h1>ЭРМИЙТЕК</h1>
+                        <span>Спецодежда и СИЗ</span>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 999 326 09 52</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ermiytek@mail.ru</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#features">Преимущества</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <button class="nav-btn">
+                    <i class="fas fa-file-alt"></i> Заказать каталог
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Качественная спецодежда и средства индивидуальной защиты</h2>
+            <p>Компания "ЭРМИЙТЕК" - производитель спецодежды и поставщик обуви и СИЗ для предприятий различных отраслей промышленности. </p>
+            <a href="#catalog" class="btn">Перейти в каталог</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Наши преимущества</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Качество продукции</h3>
+                    <p>Вся продукция сертифицирована и соответствует ГОСТ и ТР ТС.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-ruble-sign"></i>
+                    <h3>Доступные цены</h3>
+                    <p>Мы производители, а не посредники. Это нам позволяет предлагать выгодные цены.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставка по всей России в кратчайшие сроки.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Подбор спецодежды по требованиям заказчика, нанесение логотипов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Каталог продукции</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Все товары</button>
+                <button class="category-btn" data-category="workwear">Спецодежда</button>
+                <button class="category-btn" data-category="shoes">Спецобувь</button>
+                <button class="category-btn" data-category="protection">СИЗ</button>
+                <button class="category-btn" data-category="winter">Зимняя спецодежда</button>
+                <button class="category-btn" data-category="home">Одежда для дома</button>
+            </div>
+            <div class="products-grid" id="productsContainer">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">О компании</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Компания "ЭРМИЙТЕК" основана в 2022 году и за время своей работы зарекомендовала себя как надежный производитель спецодежды, поставщик обуви и средств индивидуальной защиты.</p>
+                    <p>Мы сотрудничаем с ведущими производителями России и зарубежья, что позволяет нам предлагать нашим клиентам качественную продукцию по конкурентным ценам.</p>
+                    <p>Нашими клиентами являются предприятия нефтегазовой, химической, металлургической, строительной и других отраслей промышленности.</p>
+                    <p>Мы ценим долгосрочные партнерские отношения и готовы предложить индивидуальные условия сотрудничества для каждого клиента.</p>
+                    <a href="#contacts" class="btn">Связаться с нами</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/foto.jpg" alt="О компании ЭРМИЙТЕК">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Наши контакты</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> г. Омск, ул. Карла Маркса, д. 3, офис 008</p>
+                        <p><i class="fas fa-phone"></i> +7 999 326 09 52</p>
+                        <p><i class="fas fa-envelope"></i> ermiytek@mail.ru</p>
+                        <p><i class="fas fa-clock"></i> Пн-Пт: 8:00-17:00, Сб-Вс: выходной</p>
+                    </div>
+                    <div>
+                        <img src="images/map.jpg" alt="Карта проезда">
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Оставьте заявку</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <p>Компания "ЭРМИЙТЕК" - производитель качественной спецодежды и СИЗ с 2022 года.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Продукция</h3>
+                    <ul>
+                        <li><a href="#">Спецодежда</a></li>
+                        <li><a href="#">Спецобувь</a></li>
+                        <li><a href="#">Средства защиты</a></li>
+                        <li><a href="#">Зимняя спецодежда</a></li>
+                        <li><a href="#">Корпоративная одежда</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Полезные ссылки</h3>
+                    <ul>
+                        <li><a href="#">Сертификаты</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия и возврат</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Омск, ул. Карла Маркса, д. 3</li>
+                        <li><i class="fas fa-phone"></i> +7 999 326 09 52</li>
+                        <li><i class="fas fa-envelope"></i> ermiytek@mail.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Компания "ЭРМИЙТЕК". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно галереи -->
+    <div class="gallery-modal" id="galleryModal">
+        <button class="gallery-close" id="galleryClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="gallery-counter" id="galleryCounter"></div>
+        <div class="gallery-container">
+            <img class="gallery-main-image" id="galleryMainImage" src="" alt="">
+            <button class="gallery-nav gallery-prev" id="galleryPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="gallery-nav gallery-next" id="galleryNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="gallery-thumbnails" id="galleryThumbnails">
+                <!-- Миниатюры будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Данные товаров с несколькими изображениями
+        const products = [
+            {
+                id: 1,
+                name: "Комбинезон рабочий",
+                category: "workwear",
+                price: "3300 руб.",
+                images: [
+                    "images/комбез1.jpg",
+                    "images/комбез2.jpg",
+                    "images/комбез3.jpg",
+                    "images/комбез4.jpg",
+                    "images/комбез5.jpg",
+                    "images/комбез6.jpg"
+                ],
+                description: "Прочный комбинезон 100% хлопковой ткани для различных работ. Цвет: по согласованию"
+            },
+            {
+                id: 2,
+                name: "Куртка демисизонная",
+                category: "workwear",
+                price: "2800 руб.",
+                images: [
+                    "images/куртка.jpg",
+                    "images/куртка1.png"
+                ],
+                description: "Теплая куртка с утеплителем для работы в холодное время года. Цвет: по согласованию"
+            },
+            {
+                id: 3,
+                name: "Зимняя куртка с полукомбинезоном",
+                category: "winter",
+                price: "4500 руб.",
+                images: [
+                    "images/winter_suit.jpg",
+                    "images/winter_suit1.jpg",
+                    "images/winter_suit3.png"
+                ],
+                description: "Зимний костюм из водооталкивающих тканей. Цвет: по согласованию"
+            },
+            {
+                id: 4,
+                name: "Балаклава",
+                category: "winter",
+                price: "500 руб.",
+                images: [
+                    "images/balaclava.jpg"
+                ],
+                description: "Балаклава флисовая зимняя. Цвет: по согласованию"
+            },
+            {
+                id: 5,
+                name: "Костюм зимний для повышенных температур",
+                category: "winter",
+                price: "6500 руб.",
+                images: [
+                    "images/winter_suit2.png",
+                    "images/winter_suit2_2.png"
+                ],
+                description: "Зимний костюм из смесовой ткани с желеткой. Куртка сделена с трехлойным утеплителем.Жилет отстегивается. Удобные брюки с усиленными коленями для тяжелых работ. Цвет: по согласованию"
+            },
+            {
+                id: 6,
+                name: "Костюм рабочий",
+                category: "workwear",
+                price: "2850 руб.",
+                images: [
+                    "images/рабочий2.png"
+                ],
+                description: "Прочный костюм 100% хлопковой ткани для различных работ. Цвет: по согласованию"
+            },
+            {
+                id: 7,
+                name: "Костюм офицера",
+                category: "workwear",
+                price: "3700 руб.",
+                images: [
+                    "images/офицер.png",
+                    "images/офицер2.jpg",
+                    "images/офицер3.jpg"
+                ],
+                description: "Прочный костюм 100% хлопковой ткани для различных работ. Цвет: по согласованию"
+            },
+            {
+                id: 8,
+                name: "Сапоги резиновые утепленные",
+                category: "shoes",
+                price: "3300 руб.",
+                images: [
+                    "images/сапоги.jpg",
+                    "images/сапоги1.jpg",
+                    "images/сапоги2.jpg",
+                    "images/сапоги3.jpg"
+                ],
+                description: "Резиновые сапоги с утеплителем для работы в условиях повышенной влажности с композитным подноском"
+            },
+            {
+                id: 9,
+                name: "Ботинки зимние",
+                category: "shoes",
+                price: "2500 руб.",
+                images: [
+                    "images/shoes_winter.jpg",
+                    "images/shoes_winter1.png",
+                    "images/shoes_winter2.png"
+                ],
+                description: "Ботинки сделаны из натуральной кожи с искуственным мехом, подошва двухслойная, имеет металлический подносок и антипрокольную иеталлическую стельку"
+            },
+            {
+                id: 10,
+                name: "Снуд",
+                category: "winter",
+                price: "500 руб.",
+                images: [
+                    "images/снуд.png"
+                ],
+                description: "Снуд флисовый. Цвет: по согласованию"
+            },
+            {
+                id: 11,
+                name: "Костюм рабочий",
+                category: "workwear",
+                price: "2700 руб.",
+                images: [
+                    "images/рабочий_синий_1.png",
+		    "images/рабочий_синий_2.png",
+		    "images/рабочий_синий_3.png",
+		    "images/рабочий_синий_4.png",
+		    "images/рабочий_синий_5.png",
+                ],
+                description: "Прочный костюм 100% хлопковой ткани для различных работ. Цвет: по согласованию"
+            },
+            {
+                id: 12,
+                name: "Полуботинки летние",
+                category: "shoes",
+                price: "2100 руб.",
+                images: [
+                    "images/shoes.jpg",
+                    "images/shoes_winter1.png",
+                ],
+                description: "Ботинки сделаны из натуральной кожи, подошва двухслойная, имеет металлический подносок и антипрокольную иеталлическую стельку"
+            },
+            {
+                id: 13,
+                name: "Костюм повара",
+                category: "workwear",
+                price: "2600 руб.",
+                images: [
+                    "images/повар.jpeg",
+                    "images/повар1.jpeg",
+                ],
+                description: " Цвет: по согласованию"
+            },
+            {
+                id: 14,
+                name: "Термобелье",
+                category: "winter",
+                price: "1500 руб.",
+                images: [
+                    "images/термобелье.png"
+                ],
+                description: ""
+            },
+            {
+                id: 15,
+                name: "Перчатки шерстяные",
+                category: "winter",
+                price: "150 руб.",
+                images: [
+                    "images/перчатки_ш.jpg"
+                ],
+                description: "Зимние перчатки. Размер 4"
+            },
+            {
+                id: 16,
+                name: "Перчатки",
+                category: "protection",
+                price: "16 руб.",
+                images: [
+                    "images/перчатки.jpg"
+                ],
+                description: "Перчатки ХБ."
+            },
+		{
+                id: 17,
+                name: "Комбинезон рабочий",
+                category: "workwear",
+                price: "3300 руб.",
+                images: [
+                    "images/комбезб.jpg",
+                    "images/комбезб2.jpg",
+                    "images/комбезб3.jpg",
+                    "images/комбезб4.jpg",
+                    "images/комбезб1.jpg"
+                ],
+                description: "Прочный комбинезон 100% хлопковой ткани для различных работ. Цвет: по согласованию"
+            },	
+	{
+                id: 18,
+                name: "Пижама",
+                category: "home",
+                price: "1880 руб.",
+                images: [
+                    "images/пижама1.jpg",
+                    "images/пижама2.jpg",
+                    "images/пижама3.jpg"
+                ],
+                description: "Штаны выполнены из фланели, а свитшот сделат из трехнитки (ХБ100%)"
+            },	
+	{
+                id: 19,
+                name: "Свитшот",
+                category: "home",
+                price: "950 руб.",
+                images: [
+                    "images/свитшот1.png",
+                    "images/свитшот2.png",
+                    "images/свитшот.png"
+                ],
+                description: "Свитшот сделан из ХБ100%"
+            },	
+	{
+                id: 20,
+                name: "Худи",
+                category: "home",
+                price: "1110 руб.",
+                images: [
+                    "images/худи.png"
+                ],
+                description: "Худи сделан из ХБ100%"
+            },	
+	{
+                id: 21,
+                name: "Футболка",
+                category: "home",
+                price: "300 руб.",
+                images: [
+                    "images/футболка1.png",
+                    "images/футболка2.png"
+                ],
+                description: " Футболка сделана из ХБ100%"
+            }
+           
+        ];
+
+        // Переменные для управления галереей
+        let currentProduct = null;
+        let currentImageIndex = 0;
+
+        // Функция для отображения товаров
+        function displayProducts(category = 'all') {
+            const productsContainer = document.getElementById('productsContainer');
+            productsContainer.innerHTML = '';
+            
+            const filteredProducts = category === 'all' 
+                ? products 
+                : products.filter(product => product.category === category);
+            
+            if (filteredProducts.length === 0) {
+                productsContainer.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 40px;">Товары не найдены</p>';
+                return;
+            }
+            
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card fade-in';
+                
+                // Добавляем индикатор нескольких изображений, если их больше одного
+                const multiImageIndicator = product.images.length > 1 ? 
+                    `<div class="multi-image-indicator">
+                        <i class="fas fa-images"></i> ${product.images.length}
+                    </div>` : '';
+                
+                productCard.innerHTML = `
+                    <div class="product-image" onclick="openGallery(${product.id})">
+                        <img src="${product.images[0]}" alt="${product.name}">
+                        ${multiImageIndicator}
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-meta">
+                            <div class="price">${product.price}</div>
+                            <button class="btn" onclick="showProductModal(${product.id})">Подробнее</button>
+                        </div>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+        // Функция для открытия галереи
+        function openGallery(productId) {
+            currentProduct = products.find(p => p.id === productId);
+            if (currentProduct) {
+                currentImageIndex = 0;
+                updateGallery();
+                document.getElementById('galleryModal').style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Функция для обновления галереи
+        function updateGallery() {
+            if (!currentProduct) return;
+            
+            const galleryMainImage = document.getElementById('galleryMainImage');
+            const galleryCounter = document.getElementById('galleryCounter');
+            const galleryThumbnails = document.getElementById('galleryThumbnails');
+            
+            // Устанавливаем основное изображение
+            galleryMainImage.src = currentProduct.images[currentImageIndex];
+            galleryMainImage.alt = currentProduct.name;
+            
+            // Обновляем счетчик
+            galleryCounter.textContent = `${currentImageIndex + 1} / ${currentProduct.images.length}`;
+            
+            // Очищаем и обновляем миниатюры
+            galleryThumbnails.innerHTML = '';
+            currentProduct.images.forEach((image, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.className = `gallery-thumbnail ${index === currentImageIndex ? 'active' : ''}`;
+                thumbnail.src = image;
+                thumbnail.alt = `${currentProduct.name} - фото ${index + 1}`;
+                thumbnail.onclick = () => {
+                    currentImageIndex = index;
+                    updateGallery();
+                };
+                galleryThumbnails.appendChild(thumbnail);
+            });
+            
+            // Добавляем анимацию
+            galleryMainImage.classList.remove('zoom-in');
+            void galleryMainImage.offsetWidth; // Перезапуск анимации
+            galleryMainImage.classList.add('zoom-in');
+        }
+
+        // Функция для показа модального окна с информацией о товаре
+        function showProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                alert(`Подробная информация о товаре:\n\n${product.name}\n\nЦена: ${product.price}\n\nОписание: ${product.description}\n\nДля заказа свяжитесь с нами по телефону или через форму обратной связи.`);
+            }
+        }
+
+        // Обработчик для фильтрации товаров по категориям
+        document.addEventListener('DOMContentLoaded', function() {
+            displayProducts();
+            
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    displayProducts(this.dataset.category);
+                });
+            });
+            
+            // Обработчик формы обратной связи
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время.');
+                this.reset();
+            });
+            
+            // Мобильное меню
+            document.getElementById('menuToggle').addEventListener('click', function() {
+                document.getElementById('mainNav').classList.toggle('active');
+            });
+            
+            // Плавная прокрутка к якорям
+            document.querySelectorAll('nav a, .btn[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Закрываем мобильное меню если открыто
+                        document.getElementById('mainNav').classList.remove('active');
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Управление галереей
+            document.getElementById('galleryClose').addEventListener('click', function() {
+                document.getElementById('galleryModal').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            document.getElementById('galleryPrev').addEventListener('click', function() {
+                if (currentProduct) {
+                    currentImageIndex = (currentImageIndex - 1 + currentProduct.images.length) % currentProduct.images.length;
+                    updateGallery();
+                }
+            });
+            
+            document.getElementById('galleryNext').addEventListener('click', function() {
+                if (currentProduct) {
+                    currentImageIndex = (currentImageIndex + 1) % currentProduct.images.length;
+                    updateGallery();
+                }
+            });
+            
+            // Закрытие галереи при клике вне изображения
+            document.getElementById('galleryModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    document.getElementById('galleryModal').style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Управление галереей с клавиатуры
+            document.addEventListener('keydown', function(e) {
+                const galleryModal = document.getElementById('galleryModal');
+                if (galleryModal.style.display === 'flex') {
+                    if (e.key === 'Escape') {
+                        galleryModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    } else if (e.key === 'ArrowLeft') {
+                        document.getElementById('galleryPrev').click();
+                    } else if (e.key === 'ArrowRight') {
+                        document.getElementById('galleryNext').click();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
